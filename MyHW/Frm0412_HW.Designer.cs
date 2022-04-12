@@ -369,7 +369,7 @@ namespace MyHW
             this.Controls.Add(this.label1);
             this.Name = "Frm0412_HW";
             this.Text = "Frm0412_HW";
-            this.Load += new System.EventHandler(this.Frm0412_HW_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

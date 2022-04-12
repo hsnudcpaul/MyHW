@@ -21,20 +21,8 @@ namespace MyHW
             bindingNavigator1.BindingSource = bindingSource1;
         }
 
-        private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            //this.Validate();
-            //this.productsBindingSource.EndEdit();
-            //this.tableAdapterManager.UpdateAll(this.nWDataSet);
 
-        }
 
-        private void Frm0412_HW_Load(object sender, EventArgs e)
-        {
-            // TODO: 這行程式碼會將資料載入 'nWDataSet.Products' 資料表。您可以視需要進行移動或移除。
-            //this.productsTableAdapter.Fill(this.nWDataSet.Products);
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
