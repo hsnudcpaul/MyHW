@@ -64,6 +64,17 @@
     <Compile Include="Frm0411HW.Designer.cs">
       <DependentUpon>Frm0411HW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm0412_HW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm0412_HW.Designer.cs">
+      <DependentUpon>Frm0412_HW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1. Frm標準練習.resx">
@@ -71,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm0411HW.resx">
       <DependentUpon>Frm0411HW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm0412_HW.resx">
+      <DependentUpon>Frm0412_HW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +95,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="NWDataSet.xsc">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NWDataSet.xss">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
