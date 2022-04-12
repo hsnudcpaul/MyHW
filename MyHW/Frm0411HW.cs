@@ -16,6 +16,16 @@ namespace MyHW
         public Frm0411HW()
         {
             InitializeComponent();
+       
+            SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=Northwind;Integrated Security=True");
+            conn.Open();
+            SqlCommand command = new SqlCommand("Select * from Categories ", conn);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add($"{reader["CategoryName"]}");
+            }
+            conn.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
