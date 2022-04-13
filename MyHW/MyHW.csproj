@@ -70,6 +70,12 @@
     <Compile Include="Frm0412_HW.Designer.cs">
       <DependentUpon>Frm0412_HW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm0413_HW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm0413_HW.Designer.cs">
+      <DependentUpon>Frm0413_HW.cs</DependentUpon>
+    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm0412_HW.resx">
       <DependentUpon>Frm0412_HW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm0413_HW.resx">
+      <DependentUpon>Frm0413_HW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

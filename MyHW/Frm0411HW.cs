@@ -32,10 +32,11 @@ namespace MyHW
         {
             listBox1.Items.Clear();
             listBox1.Items.Add($"{"ProductID",-15}{ "ProductName",-40}{"CategoryID",-15}{"CategoryName",-30}");
-            string s = (comboBox1.SelectedIndex + 1).ToString();
+            string s = comboBox1.SelectedItem.ToString();
             SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=Northwind;Integrated Security=True");
             conn.Open();
-            SqlCommand command = new SqlCommand("select * from Products as p join Categories as g on p.CategoryID=g.CategoryID where p.CategoryID=" + s, conn);
+            SqlCommand command = new SqlCommand("select * from Products as p join Categories as g on p.CategoryID=g.CategoryID where CategoryName='"+s+"'", conn);
+
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
