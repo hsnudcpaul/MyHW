@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +68,19 @@
     </Compile>
     <Compile Include="1. Frm標準練習.designer.cs">
       <DependentUpon>1. Frm標準練習.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CityDataSet.cs">
+      <DependentUpon>CityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CityDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -76,6 +106,24 @@
     <Compile Include="Frm0413_HW.Designer.cs">
       <DependentUpon>Frm0413_HW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm0414_HW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm0414_HW.Designer.cs">
+      <DependentUpon>Frm0414_HW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm0414_HWAAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm0414_HWAAlbum.Designer.cs">
+      <DependentUpon>Frm0414_HWAAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPhotoTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhotoTool.Designer.cs">
+      <DependentUpon>FrmPhotoTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +143,15 @@
     <EmbeddedResource Include="Frm0413_HW.resx">
       <DependentUpon>Frm0413_HW.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm0414_HW.resx">
+      <DependentUpon>Frm0414_HW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm0414_HWAAlbum.resx">
+      <DependentUpon>Frm0414_HWAAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhotoTool.resx">
+      <DependentUpon>FrmPhotoTool.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,6 +161,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ADVDataSet.xsc">
+      <DependentUpon>ADVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ADVDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ADVDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ADVDataSet.xss">
+      <DependentUpon>ADVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CityDataSet.xsc">
+      <DependentUpon>CityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CityDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CityDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CityDataSet.xss">
+      <DependentUpon>CityDataSet.xsd</DependentUpon>
+    </None>
     <None Include="NWDataSet.xsc">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
     </None>
@@ -127,6 +206,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CityPh.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CityPh_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CityPh.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

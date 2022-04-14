@@ -61,12 +61,12 @@ namespace MyHW
 
         private void button17_Click(object sender, EventArgs e)
         {
-            nwDataSet1.Products.ReadXml("Products.xml");
-            dataGridView4.DataSource = nwDataSet1.Products;
+            nwDataSet1.Products.WriteXml("Products.xml", XmlWriteMode.WriteSchema);
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
+            nwDataSet1.Products.Clear();
             nwDataSet1.Products.ReadXml("Products.xml");
             dataGridView4.DataSource = nwDataSet1.Products;
         }
