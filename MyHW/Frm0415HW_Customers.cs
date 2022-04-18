@@ -17,7 +17,12 @@ namespace MyHW
         public Frm0415HW_Customers()
         {
             InitializeComponent();
-
+          
+            LoadCountryToComboBox();
+            listView1.View = View.Details;
+            CreatListViewColums();
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+           
         }
 
         private void LoadCountryToComboBox()

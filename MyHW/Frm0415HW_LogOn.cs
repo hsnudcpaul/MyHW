@@ -71,7 +71,7 @@ namespace MyHW
                    
                     conn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
-                    MessageBox.Show($"{command.CommandText}");
+  
                     if (dataReader.HasRows)
                     {
                         MessageBox.Show("登入成功");
