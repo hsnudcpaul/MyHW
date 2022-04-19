@@ -93,7 +93,10 @@ namespace MyHW
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //bindingSource1.DataSource() 
+            DateTime max = dateTimePicker2.Value;
+            DateTime min = dateTimePicker1.Value;
+
+            productPhotoTableAdapter1.FillByOrderByDate(advDataSet1.ProductPhoto, min, max);
         }
     }
 }

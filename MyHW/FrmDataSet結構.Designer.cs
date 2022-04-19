@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class Frm0413_HW
+    partial class FrmDataSet結構
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class Frm0413_HW : Form
+    public partial class FrmDataSet結構 : Form
     {
-        public Frm0413_HW()
+        public FrmDataSet結構()
         {
             InitializeComponent();
       

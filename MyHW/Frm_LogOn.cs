@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class Frm0415HW_LogOn : Form
+    public partial class Frm_LogOn : Form
     {
-        public Frm0415HW_LogOn()
+        public Frm_LogOn()
         {
             InitializeComponent();
         }
@@ -56,6 +56,40 @@ namespace MyHW
 
         private void OK_Click(object sender, EventArgs e)
         {
+            Enter();
+        }
+
+        private void Frm0415HW_LogOn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.C && e.Alt==true)
+            {
+               Canale();
+            }
+            if (e.KeyCode == Keys.O && e.Alt==true)
+            {
+                 Enter();
+            }
+            if (e.KeyCode == Keys.U && e.Alt==true)
+            {
+                textBox1.Focus();
+            }
+            if (e.KeyCode == Keys.P && e.Alt==true)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Canale();
+        }
+
+        private void Frm0415HW_LogOn_Load(object sender, EventArgs e)
+        {
+
+        }
+        void Enter()
+        {
             try
             {
                 string username = textBox1.Text;
@@ -68,14 +102,14 @@ namespace MyHW
                     command.Connection = conn;
                     command.Parameters.Add("@username", SqlDbType.NVarChar, 16).Value = username;
                     command.Parameters.Add("@password", SqlDbType.NVarChar, 40).Value = password;
-                   
+
                     conn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
-  
+
                     if (dataReader.HasRows)
                     {
                         MessageBox.Show("登入成功");
-                        Frm0415HW_Customers frmCu = new Frm0415HW_Customers();
+                        Frm_Customers frmCu = new Frm_Customers();
                         frmCu.Show();
 
                     }
@@ -93,6 +127,10 @@ namespace MyHW
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        void Canale()
+        {
+            this.Close();
         }
     }
 }

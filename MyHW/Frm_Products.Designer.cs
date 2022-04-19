@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class Frm0412_HW
+    partial class Frm_Products
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace MyHW
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm0412_HW));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Products));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();

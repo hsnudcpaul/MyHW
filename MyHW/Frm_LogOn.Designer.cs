@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class Frm0415HW_LogOn
+    partial class Frm_LogOn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MyHW
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm0415HW_LogOn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_LogOn));
             this.button1 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
@@ -62,6 +62,7 @@ namespace MyHW
             this.Cancel.Size = new System.Drawing.Size(71, 23);
             this.Cancel.TabIndex = 28;
             this.Cancel.Text = "取消(&C)";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // OK
             // 
@@ -77,7 +78,7 @@ namespace MyHW
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(173, 120);
+            this.textBox2.Location = new System.Drawing.Point(175, 126);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -141,6 +142,8 @@ namespace MyHW
             this.Controls.Add(this.LogoPictureBox);
             this.Name = "Frm0415HW_LogOn";
             this.Text = "Form0415HW_LoadOn";
+            this.Load += new System.EventHandler(this.Frm0415HW_LogOn_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm0415HW_LogOn_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

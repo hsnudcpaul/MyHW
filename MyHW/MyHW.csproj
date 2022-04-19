@@ -84,17 +84,17 @@
       <DependentUpon>CityDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Frm0415HW_Customers.cs">
+    <Compile Include="Frm_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0415HW_Customers.Designer.cs">
-      <DependentUpon>Frm0415HW_Customers.cs</DependentUpon>
+    <Compile Include="Frm_Customers.Designer.cs">
+      <DependentUpon>Frm_Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0415HW_LogOn.cs">
+    <Compile Include="Frm_LogOn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0415HW_LogOn.Designer.cs">
-      <DependentUpon>Frm0415HW_LogOn.cs</DependentUpon>
+    <Compile Include="Frm_LogOn.Designer.cs">
+      <DependentUpon>Frm_LogOn.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -102,41 +102,61 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0411HW.cs">
+    <Compile Include="Frm_CategoryProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0411HW.Designer.cs">
-      <DependentUpon>Frm0411HW.cs</DependentUpon>
+    <Compile Include="Frm_CategoryProduct.Designer.cs">
+      <DependentUpon>Frm_CategoryProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0412_HW.cs">
+    <Compile Include="Frm_Products.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0412_HW.Designer.cs">
-      <DependentUpon>Frm0412_HW.cs</DependentUpon>
+    <Compile Include="Frm_Products.Designer.cs">
+      <DependentUpon>Frm_Products.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0413_HW.cs">
+    <Compile Include="FrmDataSet結構.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0413_HW.Designer.cs">
-      <DependentUpon>Frm0413_HW.cs</DependentUpon>
+    <Compile Include="FrmDataSet結構.Designer.cs">
+      <DependentUpon>FrmDataSet結構.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0414_HW.cs">
+    <Compile Include="Frm_AdventureWork.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Frm_AdventureWork.Designer.cs">
+      <DependentUpon>Frm_AdventureWork.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Frm_AlbumV1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0414_HW.Designer.cs">
-      <DependentUpon>Frm0414_HW.cs</DependentUpon>
+    <Compile Include="Frm_AlbumV1.Designer.cs">
+      <DependentUpon>Frm_AlbumV1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm0414_HWAAlbum.cs">
+    <Compile Include="Frm_MyAlbum_V2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm0414_HWAAlbum.Designer.cs">
-      <DependentUpon>Frm0414_HWAAlbum.cs</DependentUpon>
+    <Compile Include="Frm_MyAlbum_V2.Designer.cs">
+      <DependentUpon>Frm_MyAlbum_V2.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPhotoTool.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPhotoTool.Designer.cs">
       <DependentUpon>FrmPhotoTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTop.designer.cs">
+      <DependentUpon>FrmTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TreeView.Designer.cs">
+      <DependentUpon>Frm_TreeView.cs</DependentUpon>
     </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,29 +168,39 @@
     <EmbeddedResource Include="1. Frm標準練習.resx">
       <DependentUpon>1. Frm標準練習.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0411HW.resx">
-      <DependentUpon>Frm0411HW.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_CategoryProduct.resx">
+      <DependentUpon>Frm_CategoryProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0412_HW.resx">
-      <DependentUpon>Frm0412_HW.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Products.resx">
+      <DependentUpon>Frm_Products.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0413_HW.resx">
-      <DependentUpon>Frm0413_HW.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDataSet結構.resx">
+      <DependentUpon>FrmDataSet結構.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0414_HW.resx">
-      <DependentUpon>Frm0414_HW.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_AdventureWork.resx">
+      <DependentUpon>Frm_AdventureWork.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0414_HWAAlbum.resx">
-      <DependentUpon>Frm0414_HWAAlbum.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_AlbumV1.resx">
+      <DependentUpon>Frm_AlbumV1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0415HW_Customers.resx">
-      <DependentUpon>Frm0415HW_Customers.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Customers.resx">
+      <DependentUpon>Frm_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm0415HW_LogOn.resx">
-      <DependentUpon>Frm0415HW_LogOn.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_LogOn.resx">
+      <DependentUpon>Frm_LogOn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MyAlbum_V2.resx">
+      <DependentUpon>Frm_MyAlbum_V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhotoTool.resx">
       <DependentUpon>FrmPhotoTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTop.resx">
+      <DependentUpon>FrmTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TreeView.resx">
+      <DependentUpon>Frm_TreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

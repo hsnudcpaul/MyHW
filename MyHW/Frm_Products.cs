@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class Frm0412_HW : Form
+    public partial class Frm_Products : Form
     {
-        public Frm0412_HW()
+        public Frm_Products()
         {
             InitializeComponent();
             productsTableAdapter1.Fill(nwDataSet1.Products);

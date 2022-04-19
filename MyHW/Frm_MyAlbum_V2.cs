@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class Frm0414_HWAAlbum : Form
+    public partial class Frm_MyAlbum_V2 : Form
     {
-        public Frm0414_HWAAlbum()
+        public Frm_MyAlbum_V2()
         {
             InitializeComponent();
+        
             cityTableAdapter1.Fill(cityDataSet1.City);
-            for(int i = 0; i < cityDataSet1.City.Rows.Count; i++)
+            for (int i = 0; i < cityDataSet1.City.Rows.Count; i++)
             {
                 LinkLabel lKl = new LinkLabel();
-                lKl.Text =$"{cityDataSet1.City[i][1]}";
-                lKl.Top = i * 40 + 20;
+                lKl.Text = $"{cityDataSet1.City[i][1]}";
+                lKl.Top = i * 40 + 70;
                 lKl.Left = 10;
                 lKl.Click += LKl_Click;
                 lKl.Tag = i + 1;
-                splitContainer2.Panel1.Controls.Add(lKl);
+               flowLayoutPanel2.Controls.Add(lKl);
             }
         }
 
@@ -33,14 +34,8 @@ namespace MyHW
             LinkLabel x = (LinkLabel)sender;
             string s = x.Text;
             photoTableAdapter1.FillByCitySearch(cityDataSet1.Photo, s);
-            dataGridView1.DataSource = cityDataSet1.Photo;
+            //dataGridView1.DataSource = cityDataSet1.Photo;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmPhotoTool photo = new FrmPhotoTool();
-            photo.Show();
         }
     }
 }

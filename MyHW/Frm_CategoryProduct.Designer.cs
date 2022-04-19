@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class Frm0411HW
+    partial class Frm_CategoryProduct
     {
         /// <summary>
         /// Required designer variable.

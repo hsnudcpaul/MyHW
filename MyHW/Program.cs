@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Form_Lab;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace MyHW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm0415HW_LogOn());
+            Application.Run(new FrmTop());
         }
     }
 }

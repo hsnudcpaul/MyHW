@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class Frm0411HW : Form
+    public partial class Frm_CategoryProduct : Form
     {
-        public Frm0411HW()
+        public Frm_CategoryProduct()
         {
             InitializeComponent();
        
