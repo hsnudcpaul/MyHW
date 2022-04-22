@@ -49,7 +49,7 @@ namespace MyHW
                     comboBox1.Text = "請選擇";
                 }
             }
-
+       
 
             catch (Exception ex)
             {
@@ -262,7 +262,11 @@ namespace MyHW
                         lvi.Group = group;
                     }
 
-                    group.Header = group.ToString() + "(" + group.Items.Count + ")";
+                    //group.Header = group.ToString() + "(" + group.Items.Count + ")";
+                }
+                for(int i=0; i < listView1.Groups.Count; i++)
+                {
+                    listView1.Groups[i].Header = $"{listView1.Groups[i].Header}({listView1.Groups[i].Items.Count})";
                 }
 
 

@@ -32,12 +32,12 @@ namespace MyHW
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-               
+              
                photoPictureBox.Image = Image.FromFile(openFileDialog1.FileName);
 
             }

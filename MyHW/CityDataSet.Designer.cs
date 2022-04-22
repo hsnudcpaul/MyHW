@@ -1302,8 +1302,8 @@ SELECT PhotoID, PhotoName, City, Photo FROM Photo WHERE (PhotoID = @PhotoID)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT PhotoID, PhotoName, City, Photo FROM dbo.Photo as p join City as c on p.Ci" +
-                "ty=c.CityID  where CityName= @city";
+            this._commandCollection[1].CommandText = "SELECT PhotoID,PhotoName,City,Photo FROM dbo.Photo as p join City as c on p.City=" +
+                "c.CityID  where CityName= @city";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CityName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -1675,11 +1675,16 @@ SELECT PhotoID, PhotoName, City, Photo FROM Photo WHERE (PhotoID = @PhotoID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CityID, CityName FROM dbo.City";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT CityID FROM dbo.City where CityName = @city";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CityName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1701,6 +1706,42 @@ SELECT PhotoID, PhotoName, City, Photo FROM Photo WHERE (PhotoID = @PhotoID)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual CityDataSet.CityDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            CityDataSet.CityDataTable dataTable = new CityDataSet.CityDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByGetCity(CityDataSet.CityDataTable dataTable, string city) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((city == null)) {
+                throw new global::System.ArgumentNullException("city");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(city));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual CityDataSet.CityDataTable GetDataByGetCity(string city) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((city == null)) {
+                throw new global::System.ArgumentNullException("city");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(city));
+            }
             CityDataSet.CityDataTable dataTable = new CityDataSet.CityDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

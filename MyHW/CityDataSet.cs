@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace MyHW.CityDataSetTableAdapters {
+    
+    
+    public partial class PhotoTableAdapter {
+    }
+}
