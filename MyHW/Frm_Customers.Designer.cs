@@ -74,9 +74,9 @@ namespace MyHW
             this.listView1.ContextMenuStrip = this.contextMenuStrip2;
             this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.ImageList2;
-            this.listView1.Location = new System.Drawing.Point(134, 135);
+            this.listView1.Location = new System.Drawing.Point(36, 121);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(535, 234);
+            this.listView1.Size = new System.Drawing.Size(618, 444);
             this.listView1.SmallImageList = this.ImageList1;
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -126,14 +126,14 @@ namespace MyHW
             // customerIDAscToolStripMenuItem
             // 
             this.customerIDAscToolStripMenuItem.Name = "customerIDAscToolStripMenuItem";
-            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.customerIDAscToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.customerIDAscToolStripMenuItem.Text = "CustomerID Asc";
             this.customerIDAscToolStripMenuItem.Click += new System.EventHandler(this.customerIDAscToolStripMenuItem_Click);
             // 
             // customerIDDescToolStripMenuItem
             // 
             this.customerIDDescToolStripMenuItem.Name = "customerIDDescToolStripMenuItem";
-            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.customerIDDescToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.customerIDDescToolStripMenuItem.Text = "CustomerID Desc";
             this.customerIDDescToolStripMenuItem.Click += new System.EventHandler(this.customerIDDescToolStripMenuItem_Click);
             // 
@@ -226,7 +226,7 @@ namespace MyHW
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Frm0415HW_Customers
+            // Frm_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,7 +236,7 @@ namespace MyHW
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Name = "Frm0415HW_Customers";
+            this.Name = "Frm_Customers";
             this.Text = "Frm0415HW_Customers";
             this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);

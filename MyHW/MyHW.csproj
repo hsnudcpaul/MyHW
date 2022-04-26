@@ -108,6 +108,12 @@
     <Compile Include="Frm_CategoryProduct.Designer.cs">
       <DependentUpon>Frm_CategoryProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_OpenPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_OpenPic.Designer.cs">
+      <DependentUpon>Frm_OpenPic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Products.cs">
       <SubType>Form</SubType>
     </Compile>

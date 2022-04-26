@@ -46,6 +46,7 @@ namespace MyHW
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -84,10 +85,10 @@ namespace MyHW
             this.photoNameTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.photoPictureBox = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cityTableAdapter1 = new MyHW.CityDataSetTableAdapters.CityTableAdapter();
             this.photoTableAdapter1 = new MyHW.CityDataSetTableAdapters.PhotoTableAdapter();
             this.tableAdapterManager = new MyHW.CityDataSetTableAdapters.TableAdapterManager();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             photoIDLabel = new System.Windows.Forms.Label();
             photoNameLabel = new System.Windows.Forms.Label();
             cityLabel = new System.Windows.Forms.Label();
@@ -288,6 +289,7 @@ namespace MyHW
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer3.Panel1.Controls.Add(this.button1);
             this.splitContainer3.Panel1.Controls.Add(this.label3);
             this.splitContainer3.Panel1.Controls.Add(this.comboBox1);
@@ -300,6 +302,15 @@ namespace MyHW
             this.splitContainer3.SplitterDistance = 131;
             this.splitContainer3.TabIndex = 0;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(718, 42);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(135, 20);
+            this.comboBox2.TabIndex = 8;
+            this.comboBox2.Visible = false;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(297, 60);
@@ -308,6 +319,7 @@ namespace MyHW
             this.button1.TabIndex = 7;
             this.button1.Text = "Folder...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -417,6 +429,7 @@ namespace MyHW
             this.cityNameTextBox.Name = "cityNameTextBox";
             this.cityNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.cityNameTextBox.TabIndex = 4;
+            this.cityNameTextBox.TextChanged += new System.EventHandler(this.cityNameTextBox_TextChanged);
             // 
             // cityDataGridView
             // 
@@ -460,7 +473,7 @@ namespace MyHW
             this.photoDataGridView.RowTemplate.Height = 24;
             this.photoDataGridView.Size = new System.Drawing.Size(445, 220);
             this.photoDataGridView.TabIndex = 10;
-            // 
+          
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "PhotoID";
@@ -497,7 +510,7 @@ namespace MyHW
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 56);
             this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
+            this.button2.Text = "瀏覽";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -528,7 +541,7 @@ namespace MyHW
             this.photoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.photoBindingNavigator.Name = "photoBindingNavigator";
             this.photoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.photoBindingNavigator.Size = new System.Drawing.Size(301, 25);
+            this.photoBindingNavigator.Size = new System.Drawing.Size(270, 25);
             this.photoBindingNavigator.TabIndex = 1;
             this.photoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -662,6 +675,10 @@ namespace MyHW
             this.photoPictureBox.TabIndex = 7;
             this.photoPictureBox.TabStop = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // cityTableAdapter1
             // 
             this.cityTableAdapter1.ClearBeforeFill = true;
@@ -676,10 +693,6 @@ namespace MyHW
             this.tableAdapterManager.CityTableAdapter = this.cityTableAdapter1;
             this.tableAdapterManager.PhotoTableAdapter = this.photoTableAdapter1;
             this.tableAdapterManager.UpdateOrder = MyHW.CityDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Frm_MyAlbum_V2
             // 
@@ -779,5 +792,6 @@ namespace MyHW
         private System.Windows.Forms.DataGridView cityDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

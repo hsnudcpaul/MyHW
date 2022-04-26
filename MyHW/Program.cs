@@ -18,7 +18,7 @@ namespace MyHW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_MyAlbum_V2());
+            Application.Run(new FrmTop());
         }
     }
 }
