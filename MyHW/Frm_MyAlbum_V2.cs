@@ -39,6 +39,7 @@ namespace MyHW
                 string city = cityNameTextBox.Text;
                 photoTableAdapter1.FillByCitySearch(cityDataSet1.Photo, city);
                 photoDataGridView.DataSource = cityDataSet1.Photo;
+                
             }
         }
 
@@ -99,8 +100,11 @@ namespace MyHW
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Width = 200;
                 pic.Height = 160;
-                flowLayoutPanel3.Controls.Add(pic);
+                pic.BorderStyle = BorderStyle.Fixed3D;
 
+                flowLayoutPanel3.Controls.Add(pic);
+                //todo
+                //pic.Padding.All
                 pic.Click += Pic_Click;
             }
 
@@ -108,9 +112,9 @@ namespace MyHW
 
         private void Pic_Click(object sender, EventArgs e)
         {
-            Image bim = ((PictureBox)sender).Image;
+            Image backimg = ((PictureBox)sender).Image;
             Frm_OpenPic opPic = new Frm_OpenPic();
-            opPic.BackgroundImage = bim;
+            opPic.BackgroundImage = backimg;
             opPic.BackgroundImageLayout = ImageLayout.Stretch;
             opPic.Show();
 
@@ -137,6 +141,14 @@ namespace MyHW
 
         private void Frm_MyAlbum_V2_Load(object sender, EventArgs e)
         {
+            // TODO: 這行程式碼會將資料載入 'cityDataSet1.City' 資料表。您可以視需要進行移動或移除。
+            this.cityTableAdapter.Fill(this.cityDataSet1.City);
+            // TODO: 這行程式碼會將資料載入 'cityDataSet1.Photo' 資料表。您可以視需要進行移動或移除。
+            this.photoTableAdapter.Fill(this.cityDataSet1.Photo);
+            // TODO: 這行程式碼會將資料載入 'cityDataSet1.Photo' 資料表。您可以視需要進行移動或移除。
+            this.photoTableAdapter.Fill(this.cityDataSet1.Photo);
+            // TODO: 這行程式碼會將資料載入 'cityDataSet1.City' 資料表。您可以視需要進行移動或移除。
+            this.cityTableAdapter.Fill(this.cityDataSet1.City);
 
         }
 
@@ -161,13 +173,7 @@ namespace MyHW
             }
         }
 
-        private void cityNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string city = cityNameTextBox.Text;
-            photoTableAdapter1.FillByCitySearch(cityDataSet1.Photo, city);
-            photoDataGridView.DataSource = cityDataSet1.Photo;
-
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -208,6 +214,27 @@ namespace MyHW
             }
         }
 
+        private void cityBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cityBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.cityDataSet1);
 
+        }
+
+        private void photoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.photoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.cityDataSet1);
+
+        }
+
+        private void cityNameTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            string city = cityNameTextBox.Text;
+            photoTableAdapter.FillByCitySearch(cityDataSet1.Photo, city);
+            photoDataGridView.DataSource = cityDataSet1.Photo;
+        }
     }
 }
